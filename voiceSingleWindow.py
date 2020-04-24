@@ -84,7 +84,7 @@ class VoicePlotWindow(object):
         #print(len(in_data), frame_count) #=> class "bytes", class "int"
         if self.plot_on == True:
             self.byte_data.extend(in_data)
-        return (None, pyaudio.paComplete)
+        return (None, pyaudio.paContinue)
     
     def update(self):
         self.__stream.stop_stream()

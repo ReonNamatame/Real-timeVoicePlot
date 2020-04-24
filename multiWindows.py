@@ -77,7 +77,7 @@ class VoiceRecorder(object):
         if self.callback_on == True:
             self.byte_data.extend(in_data)
             #print("byte_data = ", len(self.byte_data)/2048)
-        return (None, pyaudio.paComplete)
+        return (None, pyaudio.paContinue)
     
     def showDeviceInfo(self):
         for i in range(self.__audio.get_device_count()):
